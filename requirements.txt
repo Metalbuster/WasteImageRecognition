@@ -1,0 +1,10 @@
+opencv_python
+numpy
+tensorflow
+imgaug
+pandas
+fastapi
+PyYAML
+scikit_learn
+uvicorn
+python-multipart
