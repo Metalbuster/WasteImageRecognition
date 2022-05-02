@@ -1,5 +1,5 @@
 resize_shape: [224, 224]
 targets: ['glass', 'metal', 'paper', 'plastic', 'trash']
 model_path: "mymodel_vgg16_rework_30epoch.h5"
-model_url: "https://github.com/Metalbuster/WasteImageRecognition/blob/main/waste_image_recognition/mymodel_vgg16_rework_30epoch.h5"
+model_url: "https://github.com/Metalbuster/WasteImageRecognition/releases/download/Prototype/mymodel_vgg16_rework_30epoch.h5"
 model_sha256: "998d38b070d54c469bedab35132cc53a13dab6bbd322637a372d4532e623ffda"
