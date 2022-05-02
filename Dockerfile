@@ -4,7 +4,7 @@ COPY app/config.yaml /deploy/
 WORKDIR /deploy/
 RUN apt update
 RUN apt install -y git
-RUN apt install -y libsm6 libxext6
+RUN apt-get install ffmpeg libsm6 libxext6 -y
 RUN apt-get install -y libglib2.0-0
 RUN apt-get install -y libxrender-dev
 RUN pip install git+https://github.com/Metalbuster/WasteImageRecognition
