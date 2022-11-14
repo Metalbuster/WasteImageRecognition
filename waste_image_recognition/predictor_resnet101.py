@@ -1,7 +1,7 @@
 import argparse
 import numpy as np
 import yaml
-from tensorflow.keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.applications.resnet import preprocess_input
 from tensorflow.keras.models import load_model
 
 from waste_image_recognition.preprocessing_utilities import (
@@ -12,7 +12,7 @@ from waste_image_recognition.preprocessing_utilities import (
 from waste_image_recognition.utils import download_model
 
 
-class ImagePredictor:
+class ImagePredictor_resnet101:
     def __init__(
         self, model_path, resize_size, targets, pre_processing_function=preprocess_input
     ):
@@ -27,7 +27,7 @@ class ImagePredictor:
         with open(config_path, "r") as f:
             config = yaml.load(f, yaml.SafeLoader)
         predictor = cls(
-            model_path=config["model_path"],
+            model_path=config["main_model_path_3"],
             resize_size=config["resize_shape"],
             targets=config["targets"],
         )
@@ -39,7 +39,7 @@ class ImagePredictor:
             config = yaml.load(f, yaml.SafeLoader)
 
         download_model(
-            config["model_url"], config["model_path"], config["model_sha256"]
+            config["main_model_url_3"], config["main_model_path_3"], config["main_model_sha256_3"]
         )
 
         return cls.init_from_config_path(config_path)

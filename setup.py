@@ -2,7 +2,6 @@ from setuptools import setup
 from setuptools import find_packages
 import os
 
-
 here = os.path.abspath(os.path.dirname(__file__))
 
 try:
@@ -13,16 +12,13 @@ except:
 
 setup(name='waste_image_recognition',
       version='1.0',
-      description='Tiny library for image classification',
-      url='https://github.com/CVxTz/FastImageClassification',
-      license='MIT',
+      description='Models for Waste image classification',
+      url='https://github.com/Metalbuster/WasteImageRecognition',
       install_requires=REQUIRED,
       classifiers=[
           'Intended Audience :: Developers',
           'Intended Audience :: Education',
           'Intended Audience :: Science/Research',
-          'License :: OSI Approved :: MIT License',
-          'Programming Language :: Python :: 3',
           'Programming Language :: Python :: 3.10',
           'Topic :: Software Development :: Libraries',
           'Topic :: Software Development :: Libraries :: Python Modules'
