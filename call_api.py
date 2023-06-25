@@ -9,6 +9,7 @@ api_2 = 'https://wasteimg-tioov5bccq-as.a.run.app/densenet169/'
 api_3 = 'https://wasteimg-tioov5bccq-as.a.run.app/resnet101/'
 api_4 = 'https://wasteimg-tioov5bccq-as.a.run.app/mobilenetv2/'
 api_5 = 'https://wasteimg-tioov5bccq-as.a.run.app/inceptionv3/'
+test_docker = 'http://127.0.0.1:8080/vgg16'
 image_file = 'test.jpg'
 #camera = PiCamera()
 
@@ -19,7 +20,7 @@ image_file = 'test.jpg'
 
 files = {'file': open(image_file, 'rb')}
     
-response = requests.post(api_2, files=files)
+response = requests.post(test_docker, files=files)
 
 try:
     results = response.text
