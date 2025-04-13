@@ -1,10 +1,8 @@
-opencv_python
-numpy
-tensorflow
-imgaug
-pandas
+tensorflow==2.11.0
 fastapi
-PyYAML
-scikit_learn
 uvicorn
+opencv-python
+numpy==1.24.4
+pyyaml
+requests
 python-multipart

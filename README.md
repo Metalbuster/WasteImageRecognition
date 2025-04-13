@@ -17,17 +17,14 @@ The pictures were taken by placing the object on a white background with 4:3 rat
 
 ## Building Docker
 
-You can git clone this repository then run the following commands at the clone folder to build the docker container. Make sure you install the docker first.
+You can git clone this repository then run the following commands at the cloned folder to build the docker container. Make sure you install the docker first.
 
-```docker build -t img_waste```
+```docker build -t img_waste .```
 
 ```docker run -p 8080:8080 img_waste```
 
-Then, you can use call_api.py to use the VGG16 trained model to classify image name 'test.jpg' which you can put in the folder yourself.
-
-## Using our WasteImageRecognition API
-
-You can go to [here](https://wasteimg-tioov5bccq-as.a.run.app/docs) to use our API. The code for using the API without the browser is provided in call_api.py. Replace test_docker in line 23 for any of the api_#num that you want to use.
+Then, you can access the local FastAPI version via http://localhost:8080/docs, and feel free to upload image and press execute on each model to use it yourself.
+If you want to use the actual web based API version, you can run the docker container on the cloud and use call_api.py to use the VGG16 trained model to classify image name 'test.jpg' which you can put in the same folder as call_api.py. Replace test_docker in line 23 for any of the api_#num for the model that you want to use.
 
 ## Conclusion
 
